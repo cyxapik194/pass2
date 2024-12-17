@@ -1,0 +1,11 @@
+import random
+pasvord = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+long = int(input("задайте длину пароля (минимум 6 символов)"))
+p = ""
+while(long < 6):
+    long = int(input("неверное кол-во символов попробуйте ещё раз"))
+if long >= 6:
+    while long > 0:
+        p+=random.choice(pasvord)
+        long -= 1
+    print(p)
